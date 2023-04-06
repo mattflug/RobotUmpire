@@ -9,8 +9,20 @@ const pitchSchema = new Schema({
     required: true,
     trimmed: true,
   },
+  name: {
+    type: Number,
+    unique: true,
+    required: true,
+    trimmed: true,
+  },
+  name: {
+    type: Number,
+    unique: true,
+    required: true,
+    trimmed: true,
+  },
 });
 
-const Ump = model("pitch", pitchSchema);
+const Pitch = model("pitch", pitchSchema);
 
 module.exports = Pitch;
