@@ -1,12 +1,10 @@
 const router = require("express").Router();
 const {
-  getUser,
-  getSingleUser,
-  createUser,
-  deleteUser,
-  addFriend,
-  removeFriend,
-  updateUser,
+  getUmps,
+  getSingleUmp,
+  createUmp,
+  deleteUmp,
+  updateUmp,
 } = require("../../controllers/userController");
 
 // /api/users
