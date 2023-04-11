@@ -3,19 +3,37 @@ const { Pitch } = require(".");
 
 // Schema to create Pitch model
 const pitchSchema = new Schema({
-  name: {
+  pitch_count: {
     type: String,
     unique: true,
     required: true,
     trimmed: true,
   },
-  name: {
+  batter: {
     type: Number,
     unique: true,
     required: true,
     trimmed: true,
   },
-  name: {
+  pitcher: {
+    type: Number,
+    unique: true,
+    required: true,
+    trimmed: true,
+  },
+  pitch_location: {
+    type: Number,
+    unique: true,
+    required: true,
+    trimmed: true,
+  },
+  pitch_speed: {
+    type: Number,
+    unique: true,
+    required: true,
+    trimmed: true,
+  },
+  pitch_type: {
     type: Number,
     unique: true,
     required: true,

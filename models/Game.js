@@ -4,15 +4,15 @@ const { Schema, model } = require("mongoose");
 
 const gameSchema = new Schema({
   date: {
-    type: String,
+    type: Number,
     required: true,
   },
   homeTeam: {
-    type: String,
+    type: Number,
     required: true,
     },
   awayTeam: {
-    type: String,
+    type: Nunber,
     required: true,
   },
   umps: [umpSchema],

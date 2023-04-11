@@ -3,8 +3,8 @@ const { Schema, model } = require("mongoose");
 // Schema to create Ump model
 const umpSchema = new Schema(
   {
-    name: {
-      type: String,
+    number: {
+      type: Number,
       unique: true,
       required: true,
       trimmed: true,
