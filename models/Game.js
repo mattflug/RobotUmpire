@@ -12,11 +12,11 @@ const gameSchema = new Schema({
     required: true,
     },
   awayTeam: {
-    type: Nunber,
+    type: Number,
     required: true,
   },
-  umps: [umpSchema],
-  pitch: [pitchSchema],
+  umps: [umpSchema.schema],
+  pitch: [pitchSchema.schema],
 });
 
 

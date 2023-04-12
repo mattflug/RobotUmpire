@@ -1,5 +1,4 @@
 const { Schema, model } = require("mongoose");
-const { Pitch } = require(".");
 
 // Schema to create Pitch model
 const pitchSchema = new Schema({
@@ -41,6 +40,6 @@ const pitchSchema = new Schema({
   },
 });
 
-const Pitch = model("pitch", pitchSchema);
+const Pitch = model("Pitch", pitchSchema);
 
 module.exports = Pitch;

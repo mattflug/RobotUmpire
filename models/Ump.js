@@ -12,6 +12,6 @@ const umpSchema = new Schema(
   },
 );
 
-const Ump = model("ump", umpSchema);
+const Ump = model("Ump", umpSchema);
 
 module.exports = Ump;

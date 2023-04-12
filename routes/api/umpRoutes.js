@@ -5,15 +5,12 @@ const {
   createUmp,
   deleteUmp,
   updateUmp,
-} = require("../../controllers/userController");
+} = require("../../controllers/umpController");
 
 // /api/users
-router.route("/").get(getUser).post(createUser);
+router.route("/").get(getUmps).post(createUmp);
 
 // /api/users/:userId
-router.route("/:userId").get(getSingleUser).delete(deleteUser).put(updateUser);
-
-// /api/users/:userId/assignments/:assignmentId
-router.route("/:userId/friends/:friendId").post(addFriend).delete(removeFriend);
+router.route("/:umpId").get(getSingleUmp).delete(deleteUmp).put(updateUmp);
 
 module.exports = router;

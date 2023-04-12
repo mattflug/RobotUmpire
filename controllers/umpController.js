@@ -26,13 +26,13 @@ module.exports = {
       });
   },
   // create a new Ump
-  createUser(req, res) {
+  createUmp(req, res) {
     Ump.create(req.body)
       .then((ump) => res.json(ump))
       .catch((err) => res.status(500).json(err));
   },
   // Delete a User and remove them from the course
-  deleteUser(req, res) {
+  deleteUmp(req, res) {
     Ump.findOneAndRemove({ _id: req.params.UmpId })
       .then((UmpData) => res.json(UmpData))
       .catch((err) => {
