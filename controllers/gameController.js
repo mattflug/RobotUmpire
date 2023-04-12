@@ -1,96 +1,122 @@
 // ObjectId() method for converting UserId string into an ObjectId for querying database
 const { ObjectId } = require("mongoose").Types;
-const { User, Thoughts } = require("../models");
-
-// TODO: Create an aggregate function to get the number of user overall
-const headCount = async () =>
-  User.aggregate()
-    // Your code here
-    .then((numberOfUser) => numberOfUser);
-
-// Execute the aggregate method on the User model and calculate the overall grade by using the $avg operator
+const { Game } = require("../models");
 
 module.exports = {
-  // Get all user
-  getUser(req, res) {
-    User.find()
-      .then(async (user) => {
-        return res.json(user);
+  // Get all games
+  getGame(req, res) {
+    Game.find()
+      .then(async (games) => {
+        return res.json(games);
       })
       .catch((err) => {
         console.log(err);
         return res.status(500).json(err);
       });
   },
-  // Get a single User
-  getSingleUser(req, res) {
-    User.findOne({ _id: req.params.userId })
+  // Get a single game
+  getSingleGame(req, res) {
+    Game.findOne({ _id: req.params.gameId })
       .select("-__v")
       .lean()
-      .then(async (UserData) => res.json(UserData))
+      .then(async (GameData) => res.json(GameData))
       .catch((err) => {
         console.log(err);
         return res.status(500).json(err);
       });
   },
-  // create a new User
-  createUser(req, res) {
-    User.create(req.body)
-      .then((User) => res.json(User))
+  // create a new Game
+  createGame(req, res) {
+    Game.create(req.body)
+      .then((Game) => res.json(Game))
       .catch((err) => res.status(500).json(err));
   },
-  // Delete a User and remove them from the course
-  deleteUser(req, res) {
-    User.findOneAndRemove({ _id: req.params.userId })
-      .then((UserData) => res.json(UserData))
+  // Delete a Game and remove them from the course
+  deleteGame(req, res) {
+    Game.findOneAndRemove({ _id: req.params.gameId })
+      .then((GameData) => res.json(GameData))
       .catch((err) => {
         console.log(err);
         res.status(500).json(err);
       });
   },
 
-  // Add an friend to a User
-  addFriend(req, res) {
-    console.log("You are adding an Friend");
+  // Add an Ump to a Game
+  addUmp(req, res) {
+    console.log("You are adding an Ump");
 
-    User.findOneAndUpdate(
-      { _id: req.params.userId },
-      { $addToSet: { friends: req.params.friendId } },
+    Game.findOneAndUpdate(
+      { _id: req.params.gameId },
+      { $addToSet: { umps: req.params.umpId } },
       { runValidators: true, new: true }
     )
-      .then((UserData) => {
-        !UserData
-          ? res.status(404).json({ message: "No User found with that ID :(" })
-          : res.json(UserData);
+      .then((UmpData) => {
+        !UmpData
+          ? res.status(404).json({ message: "No Game found with that ID :(" })
+          : res.json(UmpData);
       })
       .catch((err) => {
         console.log(err);
         res.status(500).json(err);
       });
   },
-  // Remove Friend from a User
-  removeFriend(req, res) {
-    User.findOneAndUpdate(
+  // Remove Ump from a Game
+  removeUmp(req, res) {
+    Game.findOneAndUpdate(
       { _id: req.params.userId },
-      { $pull: { friends: req.params.friendId } },
+      { $pull: { umps: req.params.friendId } },
       { runValidators: true, new: true }
     )
-      .then((UserData) =>
-        !UserData
-          ? res.status(404).json({ message: "No User found with that ID :(" })
-          : res.json(UserData)
+      .then((UmpData) =>
+        !UmpData
+          ? res.status(404).json({ message: "No Ump found with that ID :(" })
+          : res.json(UmpData)
       )
       .catch((err) => res.status(500).json(err));
   },
 
-  updateUser(req, res) {
-    console.log("You are adding an Friend");
+  // Add an Pitch to a Game
+  addPitch(req, res) {
+    console.log("You are adding a Pitch");
 
-    User.findOneAndUpdate({ _id: req.params.userId }, req.body)
-      .then((UserData) => {
-        !UserData
-          ? res.status(404).json({ message: "No User found with that ID :(" })
-          : res.json(UserData);
+    Game.findOneAndUpdate(
+      { _id: req.params.pitchId },
+      { $addToSet: { pitches: req.params.pitchId } },
+      { runValidators: true, new: true }
+    )
+      .then((PitchData) => {
+        !PitchData
+          ? res.status(404).json({ message: "No Pitch found with that ID :(" })
+          : res.json(PitchData);
+      })
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  },
+  // Remove Pitch from a Game
+  removePitch(req, res) {
+    Game.findOneAndUpdate(
+      { _id: req.params.gameId },
+      { $pull: { pitches: req.params.pitchId } },
+      { runValidators: true, new: true }
+    )
+      .then((PitchData) =>
+        !PitchData
+          ? res.status(404).json({ message: "No Pitch found with that ID :(" })
+          : res.json(PitchData)
+      )
+      .catch((err) => res.status(500).json(err));
+  },
+
+  updateGame(req, res) {
+    console.log("You are updating a Game");
+
+    Game.findOneAndUpdate({ _id: req.params.game }, req.body)
+      .then((GameData) => {
+        !GameData
+          ? res.status(404).json({ message: "No Game found with that ID :(" })
+          : res.json(GAmeData);
       })
       .catch((err) => {
         console.log(err);

@@ -7,6 +7,8 @@ const {
   addUmp,
   updateGame,
   removeUmp,
+  addPitch,
+  removePitch,
 } = require("../../controllers/gameController");
 
 // /api/games
