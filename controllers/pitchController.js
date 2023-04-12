@@ -5,9 +5,9 @@ const { Pitch } = require("../models");
 module.exports = {
   // Get all pitches
   getPitches(req, res) {
-    User.find()
-      .then(async (pitch) => {
-        return res.json(pitch);
+    Pitch.find()
+      .then(async (pitches) => {
+        return res.json(pitches);
       })
       .catch((err) => {
         console.log(err);

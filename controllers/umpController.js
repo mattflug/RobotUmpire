@@ -6,8 +6,8 @@ module.exports = {
   // Get all umps
   getUmps(req, res) {
     Ump.find()
-      .then(async (ump) => {
-        return res.json(ump);
+      .then(async (umps) => {
+        return res.json(umps);
       })
       .catch((err) => {
         console.log(err);

@@ -1,21 +1,24 @@
 const router = require("express").Router();
 const {
-  getUser,
-  getSingleUser,
-  createUser,
-  deleteUser,
-  addFriend,
-  removeFriend,
-  updateUser,
-} = require("../../controllers/userController");
+  getGame,
+  getSingleGame,
+  createGame,
+  deleteGame,
+  addUmp,
+  updateGame,
+  removeUmp,
+} = require("../../controllers/gameController");
 
-// /api/users
-router.route("/").get(getUser).post(createUser);
+// /api/games
+router.route("/").get(getGame).post(createGame);
 
-// /api/users/:userId
-router.route("/:userId").get(getSingleUser).delete(deleteUser).put(updateUser);
+// /api/games/:gameId
+router.route("/:gameId").get(getSingleGame).delete(deleteGame).put(updateGame);
 
-// /api/users/:userId/assignments/:assignmentId
-router.route("/:userId/friends/:friendId").post(addFriend).delete(removeFriend);
+// /api/gamess/:gameId/umps/:umpId
+router.route("/:gameId/umps/:umpId").post(addUmp).delete(removeUmp);
+
+// /api/gamess/:gameId/umps/:umpId
+router.route("/:gameId/pitches/:pitchId").post(addUmp).delete(removeUmp);
 
 module.exports = router;

@@ -5,6 +5,6 @@ const umpRoutes = require("./umpRoutes");
 
 router.use("/games", gameRoutes);
 router.use("/pitches", pitchRoutes);
-router.use("/umpires", umpRoutes);
+router.use("/umps", umpRoutes);
 
 module.exports = router;

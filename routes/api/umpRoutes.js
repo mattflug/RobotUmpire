@@ -7,10 +7,10 @@ const {
   updateUmp,
 } = require("../../controllers/umpController");
 
-// /api/users
+// /api/umps
 router.route("/").get(getUmps).post(createUmp);
 
-// /api/users/:userId
+// /api/umps/:umpId
 router.route("/:umpId").get(getSingleUmp).delete(deleteUmp).put(updateUmp);
 
 module.exports = router;

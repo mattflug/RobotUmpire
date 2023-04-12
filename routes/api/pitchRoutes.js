@@ -4,13 +4,13 @@ const {
   getSinglePitch,
   createPitch,
   deletePitch,
-  updateUser,
+  updatePitch,
 } = require("../../controllers/pitchController");
 
-// /api/users
+// /api/pitches
 router.route("/").get(getPitches).post(createPitch);
 
-// /api/users/:userId
+// /api/pitches/:pitchId
 router.route("/:pitchId").get(getSinglePitch).delete(deletePitch).put(updatePitch);
 
 
