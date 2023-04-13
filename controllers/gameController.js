@@ -64,7 +64,7 @@ module.exports = {
   removeUmp(req, res) {
     Game.findOneAndUpdate(
       { _id: req.params.userId },
-      { $pull: { umps: req.params.friendId } },
+      { $pull: { umps: req.params.gameId } },
       { runValidators: true, new: true }
     )
       .then((UmpData) =>
