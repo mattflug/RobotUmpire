@@ -4,7 +4,7 @@ const { Game } = require("../models");
 
 module.exports = {
   // Get all games
-  getGame(req, res) {
+  getGames(req, res) {
     Game.find()
       .then(async (games) => {
         return res.json(games);
@@ -63,8 +63,8 @@ module.exports = {
   // Remove Ump from a Game
   removeUmp(req, res) {
     Game.findOneAndUpdate(
-      { _id: req.params.userId },
-      { $pull: { umps: req.params.gameId } },
+      { _id: req.params.gameId },
+      { $pull: { umps: req.params.umpId } },
       { runValidators: true, new: true }
     )
       .then((UmpData) =>
@@ -80,7 +80,7 @@ module.exports = {
     console.log("You are adding a Pitch");
 
     Game.findOneAndUpdate(
-      { _id: req.params.pitchId },
+      { _id: req.params.gameId },
       { $addToSet: { pitches: req.params.pitchId } },
       { runValidators: true, new: true }
     )
@@ -112,11 +112,11 @@ module.exports = {
   updateGame(req, res) {
     console.log("You are updating a Game");
 
-    Game.findOneAndUpdate({ _id: req.params.game }, req.body)
+    Game.findOneAndUpdate({ _id: req.params.gameId }, req.body)
       .then((GameData) => {
         !GameData
           ? res.status(404).json({ message: "No Game found with that ID :(" })
-          : res.json(GAmeData);
+          : res.json(GameData);
       })
       .catch((err) => {
         console.log(err);

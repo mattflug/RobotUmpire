@@ -44,7 +44,7 @@ module.exports = {
   updateUmp(req, res) {
     console.log("You are updating an Ump");
 
-    Ump.findOneAndUpdate({ _id: req.params.UmpId }, req.body)
+    Ump.findOneAndUpdate({ _id: req.params.umpId }, req.body)
       .then((UmpData) => {
         !UmpData
           ? res.status(404).json({ message: "No Ump found with that ID :(" })
