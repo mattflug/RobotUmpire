@@ -12,15 +12,15 @@ const {
 } = require("../../controllers/gameController");
 
 // /api/games
-router.route("/").get(getGame).post(createGame);
+router.route("/").get(getGames).post(createGame);
 
 // /api/games/:gameId
 router.route("/:gameId").get(getSingleGame).delete(deleteGame).put(updateGame);
 
-// /api/gamess/:gameId/umps/:umpId
+// /api/games/:gameId/umps/:umpId
 router.route("/:gameId/umps/:umpId").post(addUmp).delete(removeUmp);
 
-// /api/gamess/:gameId/umps/:umpId
-router.route("/:gameId/pitches/:pitchId").post(addUmp).delete(removeUmp);
+// /api/games/:gameId/pitches/:umpId
+router.route("/:gameId/pitches/:pitchId").post(addPitch).delete(removePitch);
 
 module.exports = router;

@@ -3,7 +3,7 @@ const { Schema, model } = require("mongoose");
 // Schema to create Pitch model
 const pitchSchema = new Schema({
   pitch_count: {
-    type: String,
+    type: Number,
     unique: true,
     required: true,
     trimmed: true,
