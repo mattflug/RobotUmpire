@@ -10,13 +10,23 @@ const gameSchema = new Schema({
   homeTeam: {
     type: Number,
     required: true,
-    },
+  },
   awayTeam: {
     type: Number,
     required: true,
   },
-  umps: [umpSchema.schema],
-  pitch: [pitchSchema.schema],
+  umps: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Umps",
+    },
+  ],
+  pitch: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Pitches",
+    },
+  ],
 });
 
 
