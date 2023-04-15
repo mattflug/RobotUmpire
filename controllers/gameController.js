@@ -29,7 +29,10 @@ module.exports = {
   createGame(req, res) {
     Game.create(req.body)
       .then((Game) => res.json(Game))
-      .catch((err) => res.status(500).json(err));
+      .catch((err) => {
+        console.log(err);
+    return res.status(500).json(err);
+  });
   },
   // Delete a Game and remove them from the course
   deleteGame(req, res) {
