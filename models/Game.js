@@ -19,7 +19,7 @@ const gameSchema = new Schema({
       ref: "Ump",
     },
   ],
-  pitch: [
+  pitches: [
     {
       type: Schema.Types.ObjectId,
       ref: "Pitch",
