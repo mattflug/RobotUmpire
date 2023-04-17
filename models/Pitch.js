@@ -4,39 +4,27 @@ const { Schema, model } = require("mongoose");
 const pitchSchema = new Schema({
   pitch_count: {
     type: Number,
-    unique: true,
     required: true,
-    trimmed: true,
   },
   batter: {
     type: Number,
-    unique: false,
     required: true,
-    trimmed: true,
   },
   pitcher: {
     type: Number,
-    unique: false,
     required: true,
-    trimmed: true,
   },
   pitch_location: {
     type: Number,
-    unique: false,
     required: true,
-    trimmed: true,
   },
   pitch_speed: {
-    type: false,
-    unique: true,
+    type: Number,
     required: true,
-    trimmed: true,
   },
   pitch_type: {
-    type: false,
-    unique: true,
+    type: Number,
     required: true,
-    trimmed: true,
   },
 });
 
