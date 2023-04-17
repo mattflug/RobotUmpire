@@ -1,34 +1,31 @@
 const { Schema, model } = require("mongoose");
 
-const gameSchema = new Schema(
-  {
-    date: {
-      type: Number,
-      required: true,
+const gameSchema = new Schema({
+  date: {
+    type: Number,
+    required: true,
+  },
+  homeTeam: {
+    type: Number,
+    required: true,
+  },
+  awayTeam: {
+    type: Number,
+    required: true,
+  },
+  umps: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Ump",
     },
-    homeTeam: {
-      type: Number,
-      required: true,
+  ],
+  pitch: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Pitch",
     },
-    awayTeam: {
-      type: Number,
-      required: true,
-    },
-    umps: [
-      {
-        type: [Number],
-        ref: "Umps",
-      },
-    ],
-    pitch: [
-      {
-        type: [Number],
-        ref: "Pitches",
-      },
-    ],
-  }
-);
-
+  ],
+});
 
 const Game = model("Game", gameSchema);
 

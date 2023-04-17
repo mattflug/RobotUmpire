@@ -20,7 +20,7 @@ router.route("/:gameId").get(getSingleGame).delete(deleteGame).put(updateGame);
 // /api/games/:gameId/umps/:umpId
 router.route("/:gameId/umps/:umpId").post(addUmp).delete(removeUmp);
 
-// /api/games/:gameId/pitches/:umpId
+// /api/games/:gameId/pitches/:pitchId
 router.route("/:gameId/pitches/:pitchId").post(addPitch).delete(removePitch);
 
 module.exports = router;
