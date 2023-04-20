@@ -24,7 +24,8 @@ export default function SimpleContainer() {
               md: "row",
               lg: "row",
               xl: "row",
-            },
+                      },
+            border: "solid",
             alignItems: { xs: "center" },
           }}
         />
