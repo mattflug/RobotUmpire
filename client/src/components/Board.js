@@ -7,8 +7,27 @@ export default function SimpleContainer() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="sm">
-        <Box sx={{ bgcolor: "#008080", height: "100vh" }} />
+      <Container disableGutters maxWidth={false}>
+        <Box
+          sx={{
+            bgcolor: "#008080",
+            height: {
+              xs: "100vh",
+              sm: "130vh",
+              md: "140vh",
+              lg: "105vh",
+              xl: "150vh",
+            },
+            flexDirection: {
+              xs: "column",
+              sm: "row",
+              md: "row",
+              lg: "row",
+              xl: "row",
+            },
+            alignItems: { xs: "center" },
+          }}
+        />
       </Container>
     </React.Fragment>
   );
