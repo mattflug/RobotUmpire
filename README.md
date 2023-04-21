@@ -2,7 +2,9 @@
 
 ## Description
 
-A source to grade the accuracy of the Umpire's calls stri in each MLB game.
+A source to grade the accuracy of the Umpire's calls in each MLB game. 
+This is a full stack app that uses React, MongoDB, Exoress.js, Node.js and GraphQL.
+Material UI is used for the front end
 
 ## Table of Contents
 
