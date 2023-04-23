@@ -2,27 +2,24 @@
 
 ## Description
 
-A source to grade the accuracy of the Umpire's calls in each MLB game. 
-This is a full stack app that uses React, MongoDB, Exoress.js, Node.js and GraphQL.
-Material UI is used for the front end
+A website that displays the accuracy of the strike/ball decisions in an MLB game.
+Robot Umpire is intended to show how severe the human error is behind the plate.
+This app will connect to the MLB API to display the MLB schedule each day. 
+Strike zone statistics will be fetched as well. 
+Under my criteria- If a pitch touches the strike zone box it is considered a real strike. If it does not, it's considered a ball.
+This is a full stack app that uses React, MongoDB, Express.js, Node.js and GraphQL.
+Material UI is used for components in the front end. App is not yet deployed.
 
 ## Table of Contents
 
-- [Installation](#installation)
 - [Usage](#usage)
+- [About](#about)
 - [Contact](#contact)
 
-## Installation
-The website can be found here
-
 ## Usage
-Select the available game for each day
+Select a game to display pitch data.
 
-## Contact
-[Link to Github](https://github.com/mattflug)
-mbflug@gmail.com
-Robot Umpire App built with MERNG Stack
-
+## About
 What are all the possibilities for a pitch?
 
 1. Batter doesn’t swing, pitch touch box- Called Strike (correct call)
@@ -35,3 +32,9 @@ What are all the possibilities for a pitch?
 ![alt text](./client/src/assets/green-monster.gif)
 
 ![alt text](./client/src/assets/excalidraw.jpg)
+
+## Contact
+[Link to Github](https://github.com/mattflug)
+mbflug@gmail.com
+Robot Umpire App built with MERNG Stack
+
