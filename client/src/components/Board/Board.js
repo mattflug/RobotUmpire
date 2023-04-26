@@ -8,13 +8,13 @@ export default function SimpleContainer() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="false">
-        <Box className="container"  sx={{ bgcolor: "#cfe8fc", height: "100vh" }}>
+      <Container disableGutters maxWidth={false}>
+        <Box className="container" sx={{ bgcolor: "#008080", height: "100vh" }}>
           <Box
             className="border"
             sx={{
-              width: 300,
-              height: 300,
+              width: 1200,
+              height: 600,
               backgroundColor: "primary.dark",
               "&:hover": {
                 backgroundColor: "primary.main",

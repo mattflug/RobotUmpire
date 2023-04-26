@@ -36,10 +36,10 @@ function Header() {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#008080" }}>
+    <AppBar position="static" sx={{ backgroundColor: "white" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1, color: "#008080" }} />
           <Typography
             variant="h6"
             noWrap
@@ -51,7 +51,7 @@ function Header() {
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "inherit",
+              color: "#008080",
               textDecoration: "none",
             }}
           >
@@ -65,7 +65,7 @@ function Header() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color="#008080"
             >
               <MenuIcon />
             </IconButton>
@@ -107,7 +107,7 @@ function Header() {
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "inherit",
+              color: "#008080",
               textDecoration: "none",
             }}
           >
@@ -118,7 +118,7 @@ function Header() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{ my: 2, color: "#008080", display: "block" }}
               >
                 {page}
               </Button>
