@@ -34,7 +34,7 @@ What are all the possibilities for a pitch?
 ![alt text](./client/src/assets/excalidraw.jpg)
 
 ## Contact
-[Link to Github](https://github.com/mattflug)
+[LinkedIn](https://github.com/mattflug)
 mbflug@gmail.com
-Robot Umpire App built with MERNG Stack
+
 
