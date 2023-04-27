@@ -15,11 +15,7 @@ export default function SimpleContainer() {
             sx={{
               width: 1200,
               height: 600,
-              backgroundColor: "primary.dark",
-              "&:hover": {
-                backgroundColor: "primary.main",
-                opacity: [0.9, 0.8, 0.7],
-              },
+              backgroundColor: "#008080",
             }}
           />
         </Box>
