@@ -20,8 +20,8 @@ export default function SimpleContainer() {
           >
             <Box
               sx={{
-                width: 300,
-                height: 300,
+                width: 590,
+                height: 195,
                 backgroundColor: "primary.dark",
                 "&:hover": {
                   backgroundColor: "primary.main",
@@ -31,8 +31,19 @@ export default function SimpleContainer() {
             />
             <Box
               sx={{
-                width: 300,
-                height: 300,
+                width: 590,
+                height: 195,
+                backgroundColor: "primary.dark",
+                "&:hover": {
+                  backgroundColor: "primary.main",
+                  opacity: [0.9, 0.8, 0.7],
+                },
+              }}
+            />
+            <Box
+              sx={{
+                width: 590,
+                height: 195,
                 backgroundColor: "primary.dark",
                 "&:hover": {
                   backgroundColor: "primary.main",
