@@ -18,7 +18,7 @@ export default function SimpleContainer() {
               backgroundColor: "#008080",
             }}
           >
-            <div>
+            <div className="main">
               <Box
                 sx={{
                   width: 590,
@@ -31,20 +31,7 @@ export default function SimpleContainer() {
                 }}
               />
             </div>
-            <div>
-              <Box
-                sx={{
-                  width: 590,
-                  height: 195,
-                  backgroundColor: "primary.dark",
-                  "&:hover": {
-                    backgroundColor: "primary.main",
-                    opacity: [0.9, 0.8, 0.7],
-                  },
-                }}
-              />
-            </div>
-            <div>
+            <div className="sidebar">
               <Box
                 sx={{
                   width: 590,
