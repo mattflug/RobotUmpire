@@ -18,39 +18,45 @@ export default function SimpleContainer() {
               backgroundColor: "#008080",
             }}
           >
-            <Box
-              sx={{
-                width: 590,
-                height: 195,
-                backgroundColor: "primary.dark",
-                "&:hover": {
-                  backgroundColor: "primary.main",
-                  opacity: [0.9, 0.8, 0.7],
-                },
-              }}
-            />
-            <Box
-              sx={{
-                width: 590,
-                height: 195,
-                backgroundColor: "primary.dark",
-                "&:hover": {
-                  backgroundColor: "primary.main",
-                  opacity: [0.9, 0.8, 0.7],
-                },
-              }}
-            />
-            <Box
-              sx={{
-                width: 590,
-                height: 195,
-                backgroundColor: "primary.dark",
-                "&:hover": {
-                  backgroundColor: "primary.main",
-                  opacity: [0.9, 0.8, 0.7],
-                },
-              }}
-            />
+            <div>
+              <Box
+                sx={{
+                  width: 590,
+                  height: 195,
+                  backgroundColor: "primary.dark",
+                  "&:hover": {
+                    backgroundColor: "primary.main",
+                    opacity: [0.9, 0.8, 0.7],
+                  },
+                }}
+              />
+            </div>
+            <div>
+              <Box
+                sx={{
+                  width: 590,
+                  height: 195,
+                  backgroundColor: "primary.dark",
+                  "&:hover": {
+                    backgroundColor: "primary.main",
+                    opacity: [0.9, 0.8, 0.7],
+                  },
+                }}
+              />
+            </div>
+            <div>
+              <Box
+                sx={{
+                  width: 590,
+                  height: 195,
+                  backgroundColor: "primary.dark",
+                  "&:hover": {
+                    backgroundColor: "primary.main",
+                    opacity: [0.9, 0.8, 0.7],
+                  },
+                }}
+              />
+            </div>
           </Box>
         </Box>
       </Container>
