@@ -24,3 +24,15 @@ flex: 1;
 background-color: blue;
   padding: 20px;
 }
+
+@media screen and (max-width: 768px) {
+
+  .border {
+    flex-direction: column;
+  }
+  /* Make the sidebar stack below the body */
+  .main {
+    order: 2;
+  }
+
+}

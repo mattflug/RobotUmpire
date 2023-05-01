@@ -21,7 +21,7 @@ export default function SimpleContainer() {
             <div className="main">
               <Box
                 sx={{
-                  width: 590,
+                  width: 290,
                   height: 195,
                   backgroundColor: "primary.dark",
                   "&:hover": {
@@ -34,7 +34,7 @@ export default function SimpleContainer() {
             <div className="sidebar">
               <Box
                 sx={{
-                  width: 590,
+                  width: 290,
                   height: 195,
                   backgroundColor: "primary.dark",
                   "&:hover": {
