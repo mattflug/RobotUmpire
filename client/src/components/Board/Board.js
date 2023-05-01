@@ -2,6 +2,7 @@ import * as React from "react";
 import "./Board.css";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
 import Container from "@mui/material/Container";
 
 export default function SimpleContainer() {
@@ -21,28 +22,35 @@ export default function SimpleContainer() {
             <div className="main">
               <Box
                 sx={{
-                  width: 290,
-                  height: 195,
-                  backgroundColor: "primary.dark",
-                  "&:hover": {
-                    backgroundColor: "primary.main",
-                    opacity: [0.9, 0.8, 0.7],
+                  display: "flex",
+                  flexWrap: "wrap",
+                  "& > :not(style)": {
+                    m: 1,
+                    width: 128,
+                    height: 128,
                   },
                 }}
-              />
+              >
+ 
+                <Paper elevation={3} />
+              </Box>
             </div>
             <div className="sidebar">
               <Box
                 sx={{
-                  width: 290,
-                  height: 195,
-                  backgroundColor: "primary.dark",
-                  "&:hover": {
-                    backgroundColor: "primary.main",
-                    opacity: [0.9, 0.8, 0.7],
+                  display: "flex",
+                  flexWrap: "wrap",
+                  "& > :not(style)": {
+                    m: 1,
+                    width: 128,
+                    height: 128,
                   },
                 }}
-              />
+              >
+                <Paper elevation={0} />
+                <Paper />
+                <Paper elevation={3} />
+              </Box>
             </div>
           </Box>
         </Box>
