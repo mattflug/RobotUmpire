@@ -25,6 +25,17 @@ flex: 1;
   padding: 20px;
 }
 
+.home {
+   border-style: 10;
+    
+border: blue;
+}
+
+.away {
+   border-style: solid;
+border: blue;
+}
+
 @media screen and (max-width: 768px) {
 
   .border {

@@ -20,43 +20,56 @@ export default function SimpleContainer() {
             }}
           >
             <div className="main">
-              <Box
-                sx={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  "& > :not(style)": {
-                    m: 1,
-                    width: 128,
-                    height: 128,
-                  },
-                }}
-              >
-                <Paper elevation={3} />
-                <Paper elevation={3} />
-                <Paper elevation={3} />
-                <Paper elevation={3} />
-              </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  "& > :not(style)": {
-                    m: 1,
-                    width: 128,
-                    height: 128,
-                  },
-                }}
-              >
-                <Paper elevation={3} />
-                <Paper elevation={3} />
-                <Paper elevation={3} />
-                <Paper elevation={3} />
-              </Box>
+              <div className="home">
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    flexDirection: "row",
+                    "& > :not(style)": {
+                      m: 1,
+                      width: 128,
+                      height: 128,
+                    },
+                  }}
+                >
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                </Box>
+              </div>
+              <div className="away">
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    "& > :not(style)": {
+                      m: 1,
+                      width: 128,
+                      height: 128,
+                    },
+                  }}
+                >
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                </Box>
+              </div>
             </div>
             <div className="sidebar">
               <Box
                 sx={{
-                  display: "flex",
+                  display: "inline",
                   flexWrap: "wrap",
                   "& > :not(style)": {
                     m: 1,
