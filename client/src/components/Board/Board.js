@@ -31,7 +31,25 @@ export default function SimpleContainer() {
                   },
                 }}
               >
- 
+                <Paper elevation={3} />
+                <Paper elevation={3} />
+                <Paper elevation={3} />
+                <Paper elevation={3} />
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  "& > :not(style)": {
+                    m: 1,
+                    width: 128,
+                    height: 128,
+                  },
+                }}
+              >
+                <Paper elevation={3} />
+                <Paper elevation={3} />
+                <Paper elevation={3} />
                 <Paper elevation={3} />
               </Box>
             </div>
@@ -47,8 +65,8 @@ export default function SimpleContainer() {
                   },
                 }}
               >
-                <Paper elevation={0} />
-                <Paper />
+                <Paper elevation={3} />
+                <Paper elevation={3} />
                 <Paper elevation={3} />
               </Box>
             </div>
