@@ -12,31 +12,30 @@ display: flex;
 
 }
 
+
+.sidebar {
+  flex: 1;
+  padding: 20px;
+}
+
 .main {
   display: flex;
   flex-direction: column;
-flex: 3;
- background-color: #b9c6ae;
+  flex: 3;
+  background-color: #b9c6ae;
   padding: 20px;
   
-}
-
-.sidebar {
-flex: 1;
-  padding: 20px;
 }
 
 .home {
-  /* flex-direction: column; */
   border: solid;
-  align-items: row;
-  
+  flex-grow: 1;
+ 
 }
 
 .away {
-   flex-wrap: wrap;
+  flex-grow: 1;
   border: solid;
-
 }
 
 @media screen and (max-width: 768px) {
