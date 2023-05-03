@@ -27,13 +27,16 @@ flex: 1;
 }
 
 .home {
-  flex: 1;
+  /* flex-direction: column; */
   border: solid;
+  align-items: row;
+  
 }
 
 .away {
-   flex: 1;
+   flex-wrap: wrap;
   border: solid;
+
 }
 
 @media screen and (max-width: 768px) {

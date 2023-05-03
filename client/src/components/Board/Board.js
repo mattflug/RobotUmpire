@@ -21,10 +21,49 @@ export default function SimpleContainer() {
           >
             <div className="main">
               <div className="home">
-               
+                <Box
+                  sx={{
+                    display: "inline",
+                    flexWrap: "wrap",
+                    "& > :not(style)": {
+                      m: 1,
+                      width: 50,
+                      height: 50,
+                    },
+                  }}
+                >
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                </Box>
               </div>
               <div className="away">
-            
+                <Box
+                  sx={{
+                    display: "block",
+                    flexWrap: "wrap",
+                    flexDirection: "row",
+                    "& > :not(style)": {
+                      m: 1,
+                      width: 50,
+                      height: 50,
+                    },
+                  }}
+                >
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                  <Paper elevation={3} />
+                </Box>
               </div>
             </div>
             <div className="sidebar">
@@ -32,6 +71,7 @@ export default function SimpleContainer() {
                 sx={{
                   display: "inline",
                   flexWrap: "wrap",
+                  alignItems: "row",
                   "& > :not(style)": {
                     m: 1,
                     width: 128,
