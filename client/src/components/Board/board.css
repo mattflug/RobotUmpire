@@ -14,6 +14,7 @@ display: flex;
 
 .main {
   display: flex;
+  flex-direction: column;
 flex: 3;
  background-color: #b9c6ae;
   padding: 20px;
@@ -26,14 +27,13 @@ flex: 1;
 }
 
 .home {
-   border-style: 10;
-    
-border: blue;
+  flex: 1;
+  border: solid;
 }
 
 .away {
-   border-style: solid;
-border: blue;
+   flex: 1;
+  border: solid;
 }
 
 @media screen and (max-width: 768px) {
