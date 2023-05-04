@@ -12,6 +12,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import FetchData from "./FetchData";
 
 const pages = ["Each", "Of", "Today's","Games"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -39,7 +40,13 @@ function Header() {
     <AppBar position="static" sx={{ backgroundColor: "white" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1, color: "#008080" }} />
+          <AdbIcon
+            sx={{
+              display: { xs: "none", md: "flex" },
+              mr: 1,
+              color: "#008080",
+            }}
+          />
           <Typography
             variant="h6"
             noWrap
@@ -123,6 +130,7 @@ function Header() {
                 {page}
               </Button>
             ))}
+            <FetchData />
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
