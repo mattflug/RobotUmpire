@@ -30,8 +30,9 @@ What are all the possibilities for a pitch?
 6. Batter does swing, misses, strike (ineligible pitch)
 
 ![alt text](./client/src/assets/green-monster.gif)
-
 ![alt text](./client/src/assets/excalidraw.jpg)
+![alt text](./client/src/assets/frontend.jpg)
+
 
 ## Contact
 [LinkedIn](https://github.com/mattflug)
