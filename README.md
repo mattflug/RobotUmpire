@@ -29,8 +29,8 @@ What are all the possibilities for a pitch?
 5. Batter does swing, makes contact, either hit, out, foul (ineligible pitch)
 6. Batter does swing, misses, strike (ineligible pitch)
 
-![alt text](./client/src/assets/green-monster.gif)
 ![alt text](./client/src/assets/excalidraw.jpg)
+![alt text](./client/src/assets/green-monster.gif)
 ![alt text](./client/src/assets/frontend.jpg)
 
 
