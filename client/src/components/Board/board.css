@@ -29,6 +29,7 @@ display: flex;
 }
 
 .home {
+  
   border: solid;
   flex-grow: 1;
  
