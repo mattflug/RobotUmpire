@@ -8,7 +8,7 @@ This app will connect to the MLB API to display the MLB schedule each day.
 Strike zone statistics will be fetched as well. 
 Under my criteria- If a pitch touches the strike zone box it is considered a real strike. If it does not, it's considered a ball.
 This is a full stack app that uses React, MongoDB, Express.js, Node.js and GraphQL.
-Material UI is used for components in the front end. App is not yet deployed.
+Material UI is used for components in the front end. App is no longer being built.
 
 ## Table of Contents
 
